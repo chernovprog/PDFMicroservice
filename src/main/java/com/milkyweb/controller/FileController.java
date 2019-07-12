@@ -17,7 +17,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 
 @Controller
-public class PdfController {
+public class FileController {
     private static final String PART_PATH = "src/main/resources/templates/";
 
     @Autowired
@@ -25,6 +25,7 @@ public class PdfController {
 
     @Autowired
     private FileService fileService;
+
 
     @ResponseBody
     @RequestMapping(value = "/files/pdf/", method = RequestMethod.POST,

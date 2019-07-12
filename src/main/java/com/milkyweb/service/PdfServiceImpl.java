@@ -10,7 +10,6 @@ import net.sf.jasperreports.engine.JRDataSource;
 import net.sf.jasperreports.engine.JREmptyDataSource;
 import net.sf.jasperreports.engine.JRException;
 import net.sf.jasperreports.engine.JasperCompileManager;
-import net.sf.jasperreports.engine.JasperExportManager;
 import net.sf.jasperreports.engine.JasperFillManager;
 import net.sf.jasperreports.engine.JasperPrint;
 import net.sf.jasperreports.engine.JasperReport;
@@ -23,8 +22,7 @@ import java.util.List;
 import java.util.Map;
 
 @Service
-public class FileServiceImpl implements FileService {
-    private static final String DEST = "demo.pdf";
+public class PdfServiceImpl implements PdfService {
 
     public JasperPrint generatePdf(String template, JsonDetail json) {
         JasperPrint jasperPrint = null;
@@ -65,14 +63,6 @@ public class FileServiceImpl implements FileService {
         }
 
         return jasperPrint;
-    }
-
-    public void savePdf(JasperPrint jasperPrint) {
-        try {
-            JasperExportManager.exportReportToPdfFile(jasperPrint, DEST);
-        } catch (JRException e) {
-            e.printStackTrace();
-        }
     }
 
 }
