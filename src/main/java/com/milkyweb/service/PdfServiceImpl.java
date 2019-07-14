@@ -54,7 +54,8 @@ public class PdfServiceImpl implements PdfService {
             parameters.put("carrier", dataSourceCarrier);
             parameters.put("shipper", dataSourceShipper);
             parameters.put("consignee", dataSourceConsignee);
-            parameters.put("condition", condition.getCondition());
+            parameters.put("mainCondition", condition.getMainCondition());
+            parameters.put("lastPageCondition", condition.getLastPageCondition());
 
             jasperPrint = JasperFillManager.fillReport(jasperReport, parameters, jrDataSource);
 

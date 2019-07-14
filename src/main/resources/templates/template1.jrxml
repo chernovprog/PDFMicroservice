@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Jaspersoft Studio version 6.9.0.final using JasperReports Library version 6.9.0-cb8f9004be492ccc537180b49c026951f4220bf3  -->
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank_A4_3" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="63b58939-6533-49f5-8c29-4a70685a0d5a">
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank_A4_3" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" isSummaryNewPage="true" isSummaryWithPageHeaderAndFooter="true" uuid="63b58939-6533-49f5-8c29-4a70685a0d5a">
 	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
 	<style name="Table 4_TH" mode="Opaque" backcolor="#F0F8FF">
 		<box>
@@ -121,7 +121,8 @@
 	<parameter name="shipper" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
 	<parameter name="consignee" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
 	<parameter name="carrier" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
-	<parameter name="condition" class="java.lang.String"/>
+	<parameter name="mainCondition" class="java.lang.String"/>
+	<parameter name="lastPageCondition" class="java.lang.String"/>
 	<queryString>
 		<![CDATA[]]>
 	</queryString>
@@ -140,7 +141,7 @@
 		</band>
 	</title>
 	<pageHeader>
-		<band height="115" splitType="Stretch">
+		<band height="114" splitType="Stretch">
 			<image>
 				<reportElement x="10" y="0" width="185" height="84" uuid="e2c204c1-7bfa-4694-bfc7-696be16513c9">
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
@@ -148,7 +149,7 @@
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
 					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
 				</reportElement>
-				<imageExpression><![CDATA["img/Midex_Corp.jpg"]]></imageExpression>
+				<imageExpression><![CDATA["src/main/resources/img/Midex_Corp.jpg"]]></imageExpression>
 			</image>
 			<componentElement>
 				<reportElement x="250" y="0" width="285" height="84" uuid="438ef6d4-f08a-4fc2-b74a-ce8b9584eb6a">
@@ -447,7 +448,7 @@
 		<band splitType="Stretch"/>
 	</columnHeader>
 	<detail>
-		<band height="429" splitType="Stretch">
+		<band height="344" splitType="Stretch">
 			<componentElement>
 				<reportElement mode="Opaque" x="10" y="50" width="525" height="102" backcolor="#FAFAFA" uuid="7417cf47-ca8a-4fd2-aa8e-c53fc8cce14d"/>
 				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical">
@@ -1047,7 +1048,7 @@
 								<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#DFDFDF"/>
 								<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#DFDFDF"/>
 							</box>
-							<textElement verticalAlignment="Middle">
+							<textElement textAlignment="Center" verticalAlignment="Middle">
 								<font isBold="true"/>
 								<paragraph leftIndent="3"/>
 							</textElement>
@@ -1065,7 +1066,7 @@
 								<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#DFDFDF"/>
 								<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#DFDFDF"/>
 							</box>
-							<textElement verticalAlignment="Middle">
+							<textElement textAlignment="Center" verticalAlignment="Middle">
 								<font isBold="true"/>
 								<paragraph leftIndent="3"/>
 							</textElement>
@@ -1083,7 +1084,7 @@
 								<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#DFDFDF"/>
 								<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#DFDFDF"/>
 							</box>
-							<textElement verticalAlignment="Middle">
+							<textElement textAlignment="Center" verticalAlignment="Middle">
 								<font isBold="true"/>
 								<paragraph leftIndent="3"/>
 							</textElement>
@@ -1101,7 +1102,7 @@
 								<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#DFDFDF"/>
 								<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#DFDFDF"/>
 							</box>
-							<textElement verticalAlignment="Middle">
+							<textElement textAlignment="Center" verticalAlignment="Middle">
 								<font isBold="true"/>
 								<paragraph leftIndent="3"/>
 							</textElement>
@@ -1119,7 +1120,7 @@
 								<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#DFDFDF"/>
 								<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#DFDFDF"/>
 							</box>
-							<textElement verticalAlignment="Middle">
+							<textElement textAlignment="Center" verticalAlignment="Middle">
 								<font isBold="true"/>
 								<paragraph leftIndent="3"/>
 							</textElement>
@@ -1137,7 +1138,7 @@
 								<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#DFDFDF"/>
 								<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#DFDFDF"/>
 							</box>
-							<textElement verticalAlignment="Middle">
+							<textElement textAlignment="Center" verticalAlignment="Middle">
 								<font isBold="true"/>
 								<paragraph leftIndent="3"/>
 							</textElement>
@@ -1248,20 +1249,17 @@
 					</jr:listContents>
 				</jr:list>
 			</componentElement>
-			<textField isStretchWithOverflow="true">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="false">
 				<reportElement x="10" y="260" width="525" height="20" uuid="272e1040-d48c-43f0-bf09-6081c9452e70">
 					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
 				</reportElement>
 				<textElement>
 					<paragraph leftIndent="3"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$P{condition}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$P{mainCondition}]]></textFieldExpression>
 			</textField>
 		</band>
 	</detail>
-	<columnFooter>
-		<band height="45" splitType="Stretch"/>
-	</columnFooter>
 	<pageFooter>
 		<band height="31" splitType="Stretch">
 			<textField>
@@ -1277,6 +1275,34 @@
 		</band>
 	</pageFooter>
 	<summary>
-		<band height="42" splitType="Stretch"/>
+		<band height="149">
+			<staticText>
+				<reportElement x="10" y="90" width="525" height="20" uuid="b655b466-2a91-4f80-abc5-7cc3c8ea2621">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<paragraph leftIndent="3"/>
+				</textElement>
+				<text><![CDATA[Accepted By: ______________________ Date: ______________________ Signature: _______________________ ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="120" width="525" height="20" uuid="4e98c932-f8e7-406c-9ec7-70a37e9d87b3">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<paragraph leftIndent="3"/>
+				</textElement>
+				<text><![CDATA[Driver Name: ___________________ Cell #: ___________________ Truck #: ___________ Trailer #: ___________ ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="10" y="10" width="524" height="18" uuid="15783720-35f5-4e54-bdcb-5a9cf0a2cca8">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+				</reportElement>
+				<textElement>
+					<paragraph leftIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{lastPageCondition}]]></textFieldExpression>
+			</textField>
+		</band>
 	</summary>
 </jasperReport>

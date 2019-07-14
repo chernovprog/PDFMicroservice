@@ -1,13 +1,22 @@
 package com.milkyweb.model;
 
 public class Condition {
-    private String condition;
+    private String mainCondition;
+    private String lastPageCondition;
 
-    public String getCondition() {
-        return condition;
+    public String getMainCondition() {
+        return mainCondition;
     }
 
-    public void setCondition(String condition) {
-        this.condition = condition;
+    public void setMainCondition(String mainCondition) {
+        this.mainCondition = mainCondition;
+    }
+
+    public String getLastPageCondition() {
+        return lastPageCondition;
+    }
+
+    public void setLastPageCondition(String lastPageCondition) {
+        this.lastPageCondition = lastPageCondition;
     }
 }
